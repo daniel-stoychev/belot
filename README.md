@@ -1,0 +1,2 @@
+# belot
+Card game calculator
