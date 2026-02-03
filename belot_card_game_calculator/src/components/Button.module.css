@@ -1,0 +1,19 @@
+.button {
+  padding: 1rem 2.75rem;
+  font-size: 1.0rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
