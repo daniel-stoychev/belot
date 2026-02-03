@@ -138,3 +138,21 @@ Built as a learning & portfolio project by a junior React developer.
 ## 📄 License
 
 MIT
+
+## TODOS
+
+- [x] Do initial commit
+- [x] Clean create vite dummy data
+- [x] Update main & App jsx
+- [] Imnstall React Router
+- [] Setup
+- []
+- []
+- []
+- []
+- []
+- []
+- []
+- []
+- []
+- []
