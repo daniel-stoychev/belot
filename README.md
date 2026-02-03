@@ -141,17 +141,24 @@ MIT
 
 ## TODOS
 
+### Initial setup
+
 - [x] Do initial commit
 - [x] Clean create vite dummy data
 - [x] Update main & App jsx
 - [x] Install React Router
 - [x] Add Header.jsx
 - [x] Add ScoreBoard.jsx
-- [] Add Button.jsx
+- [x] Add Button.jsx
+
+### Base Layout
+
+- [x] Update Header
+- [] Create main game screen
+  - [] Add Header.module.css
+  - [] Display two teams side by side
+  - [] Add placeholders for scores
 - [] Add gameLogic.js
-- []
-- []
-- []
 - []
 - []
 - []
