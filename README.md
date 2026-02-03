@@ -155,7 +155,8 @@ MIT
 
 - [x] Update Header
 - [] Create main game screen
-  - [] Add Header.module.css
+  - [x] Add Header.module.css
+  - [] Add global CSS
   - [] Display two teams side by side
   - [] Add placeholders for scores
 - [] Add gameLogic.js
