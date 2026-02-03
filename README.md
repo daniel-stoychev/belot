@@ -162,7 +162,7 @@ MIT
   - [x] Setup Button.jsx & Button.module.css
 - [] Add gameLogic.js
   - [x] Setup form and print results in console
-  - []
+  - [x] Calculate scores and add new container of scores are larger than 0
   - []
   - []
 - []
