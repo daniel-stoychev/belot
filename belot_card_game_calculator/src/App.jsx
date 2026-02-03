@@ -1,9 +1,15 @@
 import { useState } from "react";
+import { Route, Routes } from "react-router";
+import Header from "./components/Heder.jsx";
+import ScoreBoard from "./components/ScoreBoard.jsx";
 
 function App() {
   return (
     <>
-      <h1>BELOT</h1>
+      <Header />
+      <Routes>
+        <Route index element={<ScoreBoard />} />
+      </Routes>
     </>
   );
 }

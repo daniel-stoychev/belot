@@ -48,11 +48,11 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 ```
 /src
  ├── components
- │   ├── TeamScore.jsx
- │   ├── ScoreInput.jsx
+ │   ├── Header.jsx
+ │   ├── ScoreBoard.jsx
  │   └── Button.jsx
  ├── logic
- │   └── gameLogic.ts
+ │   └── gameLogic.js
  ├── pages
  │   └── Game.jsx
  ├── App.jsx
@@ -144,12 +144,11 @@ MIT
 - [x] Do initial commit
 - [x] Clean create vite dummy data
 - [x] Update main & App jsx
-- [] Imnstall React Router
-- [] Setup
-- []
-- []
-- []
-- []
+- [x] Install React Router
+- [x] Add Header.jsx
+- [x] Add ScoreBoard.jsx
+- [] Add Button.jsx
+- [] Add gameLogic.js
 - []
 - []
 - []
