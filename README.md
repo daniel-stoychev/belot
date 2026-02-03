@@ -157,9 +157,13 @@ MIT
 - [] Create main game screen
   - [x] Add Header.module.css
   - [x] Add global CSS
-  - [] Display two teams side by side
-  - [] Add placeholders for scores
+  - [x] Display two teams and input fields
+  - [x] Add ScoreBoard.module.css
+  - [x] Setup Button.jsx & Button.module.css
 - [] Add gameLogic.js
-- []
+  - [x] Setup form and print results in console
+  - []
+  - []
+  - []
 - []
 - []
