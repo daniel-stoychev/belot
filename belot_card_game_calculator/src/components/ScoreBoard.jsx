@@ -1,9 +1,12 @@
 import { useState } from "react";
 import Button from "./Button.jsx";
+import buttonStyles from "./Button.module.css";
 import styles from "./ScoreBoard.module.css";
+import useLocalStorage from "../hooks/useLocalStorage.js";
 
 export default function ScoreBoard() {
-  const [history, setHistory] = useState([]);
+  // const [history, setHistory] = useState([]);
+  const [history, setHistory] = useLocalStorage([], "rounds");
 
   const teamScores = (e) => {
     e.preventDefault();
@@ -66,7 +69,9 @@ export default function ScoreBoard() {
               <>
                 <h2>Game ended!</h2>
                 {totalA > totalB ? <h2>Team A won!</h2> : <h2>Team B won!</h2>}
-                <Button onClick={resetHandler}>Start new game?</Button>
+                <button className={buttonStyles.button} onClick={resetHandler}>
+                  Start new game?
+                </button>
               </>
             )}
           </div>

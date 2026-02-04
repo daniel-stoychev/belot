@@ -151,21 +151,31 @@ MIT
 - [x] Add ScoreBoard.jsx
 - [x] Add Button.jsx
 
-### Base Layout
+### Base Layout & Score Input
 
 - [x] Update Header
 - [] Create main game screen
   - [x] Add Header.module.css
   - [x] Add global CSS
   - [x] Display two teams and input fields
+  - [] Basic validation (numbers only)
   - [x] Add ScoreBoard.module.css
   - [x] Setup Button.jsx & Button.module.css
-- [] Add gameLogic.js
-  - [x] Setup form and print results in console
-  - [x] Calculate scores and add new container if scores are larger than 0
-  - [x] Preserver old score and add new on new line
-  - [] Allow team names update
-  - [x] Disable button after 151 is reached & add "start new game button"
-  - [x] Reset inputs after submit
+
+### State Management
+
+- [x] Setup form and print results in console
+- [x] Calculate scores and add new container if scores are larger than 0
+- [x] Preserver old score and add new on new line
+- [] Allow team names update
+- [x] Disable button after 151 is reached & add "start new game button"
+- [x] Reset inputs after submit
 - [] Preserver in localstorage
-- []
+
+- [] Move logic to gameLogic.js
+- [] Host
+
+### Bonus
+
+- [] functionality for team names update
+- [] games history
