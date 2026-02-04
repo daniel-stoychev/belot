@@ -48,14 +48,14 @@
 
 /*  ==  == ==  */
 
-.initialScores {
+.totals {
     display: flex;
     justify-content: flex-end;
     gap: 5%;
     margin-top: 20px;
     margin-right: 20px;
 }
-.initialScores h2 {
+.totals h2 {
     margin: 0;
 }
 

@@ -165,7 +165,7 @@ MIT
   - [x] Calculate scores and add new container if scores are larger than 0
   - [x] Preserver old score and add new on new line
   - [] Allow team names update
-  - []
-  - [] Reset inputs after submit
+  - [] Disable button after 151 is reached (?)
+  - [x] Reset inputs after submit
 - [] Preserver in localstorage
 - []

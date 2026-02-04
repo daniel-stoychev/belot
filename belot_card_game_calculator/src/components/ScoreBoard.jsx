@@ -28,9 +28,6 @@ export default function ScoreBoard() {
   const totalA = history.reduce((sum, round) => sum + round.teamA, 0);
   const totalB = history.reduce((sum, round) => sum + round.teamB, 0);
 
-  console.log(totalA);
-  console.log(totalB);
-
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>Score Board</h1>
@@ -79,7 +76,7 @@ export default function ScoreBoard() {
             ))}
           </div>
           <div className={styles.line}></div>
-          <div className={styles.initialScores}>
+          <div className={styles.totals}>
             <h2>Total: {totalA}</h2>
             <h2>Total: {totalB}</h2>
           </div>
