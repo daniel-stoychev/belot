@@ -24,6 +24,12 @@ export default function ScoreBoard() {
 
     e.target.reset();
   };
+
+  const resetHandler = () => {
+    console.log("test");
+    setHistory([]);
+  };
+
   // derived totals (no extra state!)
   const totalA = history.reduce((sum, round) => sum + round.teamA, 0);
   const totalB = history.reduce((sum, round) => sum + round.teamB, 0);
@@ -54,8 +60,15 @@ export default function ScoreBoard() {
               placeholder="Enter score"
               className={styles.input}
             />
-
-            <Button>Calc</Button>
+            {totalA < 151 && totalB < 151 ? (
+              <Button>Calc</Button>
+            ) : (
+              <>
+                <h2>Game ended!</h2>
+                {totalA > totalB ? <h2>Team A won!</h2> : <h2>Team B won!</h2>}
+                <Button onClick={resetHandler}>Start new game?</Button>
+              </>
+            )}
           </div>
         </form>
       </div>
