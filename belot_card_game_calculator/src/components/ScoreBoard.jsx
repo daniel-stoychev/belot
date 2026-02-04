@@ -3,16 +3,34 @@ import Button from "./Button.jsx";
 import styles from "./ScoreBoard.module.css";
 
 export default function ScoreBoard() {
-  const [scoreAteam, setScoresA] = useState(0);
-  const [scoreBteam, setScoresB] = useState(0);
+  const [history, setHistory] = useState([]);
+
   const teamScores = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    const scores = Object.values(data).map(Number);
-    setScoresA((prev) => prev + scores[0]);
-    setScoresB((prev) => prev + scores[1]);
+    const teamA = Number(data.teamA);
+    const teamB = Number(data.teamB);
+
+    setHistory((prev) => [
+      ...prev,
+      {
+        teamA,
+        teamB,
+      },
+    ]);
+
+    console.log(history);
+
+    e.target.reset();
   };
+  // derived totals (no extra state!)
+  const totalA = history.reduce((sum, round) => sum + round.teamA, 0);
+  const totalB = history.reduce((sum, round) => sum + round.teamB, 0);
+
+  console.log(totalA);
+  console.log(totalB);
+
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>Score Board</h1>
@@ -44,17 +62,26 @@ export default function ScoreBoard() {
           </div>
         </form>
       </div>
-      {scoreAteam > 0 || scoreBteam > 0 ? (
+      {history.length > 0 ? (
         <>
           <div className={styles.line}></div>
+          <div className={styles.resultTitles}>
+            <h2>Team A</h2>
+            <h2>Team B</h2>
+          </div>
+          <div>
+            {history.map((round, index) => (
+              <div className={styles.results} key={index}>
+                <h2>Round: {index + 1}</h2>
+                <h2 className={styles.teamA}>{round.teamA}</h2>
+                <h2 className={styles.teamB}>{round.teamB}</h2>
+              </div>
+            ))}
+          </div>
+          <div className={styles.line}></div>
           <div className={styles.initialScores}>
-            <h2 className={styles.teamTitle}>
-              Team A<p>{scoreAteam}</p>
-            </h2>
-
-            <h2 className={styles.teamTitle}>
-              Team B<p>{scoreBteam}</p>
-            </h2>
+            <h2>Total: {totalA}</h2>
+            <h2>Total: {totalB}</h2>
           </div>
         </>
       ) : (

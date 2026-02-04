@@ -50,7 +50,35 @@
 
 .initialScores {
     display: flex;
+    justify-content: flex-end;
+    gap: 5%;
     margin-top: 20px;
+    margin-right: 20px;
+}
+.initialScores h2 {
+    margin: 0;
+}
+
+.resultTitles {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10%;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.resultTitles h2 {
+    margin: 0;
+}
+
+.results {
+    display: flex;
+}
+
+.results h2 {
+    margin-left: 2rem;
 }
 
 /* Desktop enhancement */
