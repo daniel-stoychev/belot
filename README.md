@@ -170,7 +170,7 @@ MIT
 - [] Allow team names update
 - [x] Disable button after 151 is reached & add "start new game button"
 - [x] Reset inputs after submit
-- [] Preserver in localstorage
+- [x] Preserver in localstorage
 
 - [] Move logic to gameLogic.js
 - [] Host

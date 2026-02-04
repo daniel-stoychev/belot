@@ -6,7 +6,7 @@ import useLocalStorage from "../hooks/useLocalStorage.js";
 
 export default function ScoreBoard() {
   // const [history, setHistory] = useState([]);
-  const [history, setHistory] = useLocalStorage([], "rounds");
+  const [history, setHistory] = useLocalStorage("rounds", []);
 
   const teamScores = (e) => {
     e.preventDefault();

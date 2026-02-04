@@ -1,13 +1,15 @@
 import { useState } from "react"
 
-export default function useLocalStorage(initialData, key) {
+export default function useLocalStorage(key, initialData) {
     const [state, setState] = useState(() => {
         const storageData = localStorage.getItem(key);
         if (!storageData) {
             return initialData;
         }
+
         const data = JSON.parse(storageData);
-        return data;
+
+        return data; // returns the data to the state (initial state)
     });
 
     const setPersistedState = (input) => {
