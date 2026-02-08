@@ -30,7 +30,9 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 
 - **React** (Web)
 - **Vite**
-- CSS (or CSS Modules / Tailwind – optional)
+- CSS (CSS Modules)
+- React Router
+- localStorage
 
 ---
 
@@ -111,11 +113,11 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 
 ## 🧪 Testing Checklist
 
-- [ ] App works on mobile browsers
-- [ ] Score updates correctly
-- [ ] Reset works
-- [ ] No console errors
-- [ ] UI does not overflow screen
+- [x] App works on mobile browsers
+- [x] Score updates correctly
+- [x] Reset works
+- [x] No console errors
+- [x] UI does not overflow screen
 
 ---
 
@@ -158,7 +160,7 @@ MIT
   - [x] Add Header.module.css
   - [x] Add global CSS
   - [x] Display two teams and input fields
-  - [] Basic validation (numbers only)
+  - [x] Basic validation (numbers only, performed by browser and input type)
   - [x] Add ScoreBoard.module.css
   - [x] Setup Button.jsx & Button.module.css
 
@@ -167,15 +169,14 @@ MIT
 - [x] Setup form and print results in console
 - [x] Calculate scores and add new container if scores are larger than 0
 - [x] Preserver old score and add new on new line
-- [] Allow team names update
 - [x] Disable button after 151 is reached & add "start new game button"
 - [x] Reset inputs after submit
 - [x] Preserver in localstorage
 
-- [] Move logic to gameLogic.js
-- [] Host
-
 ### Bonus
 
+- [x] Build & Host
+- [] Move logic to gameLogic.js
+- [] Allow team names update
 - [] functionality for team names update
 - [] games history

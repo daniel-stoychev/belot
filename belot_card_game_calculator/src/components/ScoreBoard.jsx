@@ -1,5 +1,5 @@
 import Button from "./ButtonCalc.jsx";
-// import buttonStyles from "./ButtonCalc.module.css";
+import buttonStyles from "./Buttons.module.css";
 import styles from "./ScoreBoard.module.css";
 import useLocalStorage from "../hooks/useLocalStorage.js";
 
@@ -59,14 +59,12 @@ export default function ScoreBoard() {
               className={styles.input}
             />
             {totalA < 151 && totalB < 151 ? (
-              <Button>Calc</Button>
+              <Button type="Submit">Calc</Button>
             ) : (
               <>
                 <h2>Game ended!</h2>
                 {totalA > totalB ? <h2>Team A won!</h2> : <h2>Team B won!</h2>}
-                <button className={buttonStyles.button} onClick={resetHandler}>
-                  Start new game?
-                </button>
+                <Button onClick={resetHandler}>Start new game?</Button>
               </>
             )}
           </div>
@@ -95,7 +93,7 @@ export default function ScoreBoard() {
           </div>
         </>
       ) : (
-        <p></p>
+        <p>No results yet.</p>
       )}
     </section>
   );
