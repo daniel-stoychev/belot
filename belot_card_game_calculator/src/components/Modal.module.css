@@ -1,0 +1,94 @@
+/* The semi-transparent background */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darken background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px); /* Modern blur effect */
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* The Modal Box */
+.container {
+  background-color: white;
+  width: 70%;
+  border-radius: 12px;
+  position: relative;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  /* Top accent using your yellow */
+  border-top: 8px solid rgba(255, 194, 11, 0.905);
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Close Button */
+.modalCloseBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(255, 194, 11, 0.905);
+  border: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.modal-close-btn:hover {
+  transform: rotate(90deg);
+  background-color: black;
+  color: white;
+}
+
+/* Content Styling */
+.content h1 {
+  margin-top: 0;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.content p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.content input {
+    margin: 1rem 0;
+}
+
+.teamTitle {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+
+.input {
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
