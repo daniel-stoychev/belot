@@ -11,7 +11,10 @@ export default function Modal({ isOpen, onClose }) {
     console.log("UpdateNames");
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    console.log(data);
+    console.log(data.teamA);
+    console.log(data.teamB);
+    localStorage.setItem("newTeamA", `${data.teamA}`);
+    localStorage.setItem("newTeamB", `${data.teamB}`);
   };
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
