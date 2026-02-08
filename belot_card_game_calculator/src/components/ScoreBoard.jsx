@@ -1,6 +1,5 @@
-import { useState } from "react";
-import Button from "./Button.jsx";
-import buttonStyles from "./Button.module.css";
+import Button from "./ButtonCalc.jsx";
+// import buttonStyles from "./ButtonCalc.module.css";
 import styles from "./ScoreBoard.module.css";
 import useLocalStorage from "../hooks/useLocalStorage.js";
 
@@ -22,14 +21,10 @@ export default function ScoreBoard() {
         teamB,
       },
     ]);
-
-    console.log(history);
-
     e.target.reset();
   };
 
   const resetHandler = () => {
-    console.log("test");
     setHistory([]);
   };
 
