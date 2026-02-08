@@ -87,9 +87,17 @@ export default function ScoreBoard() {
                 <>
                   <h2>Game ended!</h2>
                   {totalA > totalB ? (
-                    <h2>Team A won!</h2>
+                    <h2>
+                      {newNameTeamA === null
+                        ? "Team A won!"
+                        : `Team ${newNameTeamA} won!`}
+                    </h2>
                   ) : (
-                    <h2>Team B won!</h2>
+                    <h2>
+                      {newNameTeamB === null
+                        ? "Team B won!"
+                        : `Team ${newNameTeamB} won!`}
+                    </h2>
                   )}
                   <Button onClick={resetHandler}>Start new game?</Button>
                 </>
@@ -101,8 +109,9 @@ export default function ScoreBoard() {
           <>
             <div className={styles.line}></div>
             <div className={styles.resultTitles}>
-              <h2>Team A</h2>
-              <h2>Team B</h2>
+              <h2>Rounds</h2>
+              <h2>{newNameTeamA === null ? "Team A" : newNameTeamA}</h2>
+              <h2>{newNameTeamB === null ? "Team B" : newNameTeamB}</h2>
             </div>
             <div>
               {history.map((round, index) => (
