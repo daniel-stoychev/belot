@@ -180,9 +180,10 @@ MIT
 - [] Allow team names update
   - [x] Create Tram names Button component
   - [x] Add button ("Update team names?") to Home
-  - [] Create separate compionent for Modal
-  - [] Show Modal window on Butotn click
-  - [] Implement logic
+  - [x] Create separate compionent for Modal
+  - [x] Show Modal window on Butotn click
+  - [x] Fix Modal CSS
+  - [] Implement logic for names update
 
 - [] functionality for team names update
 - [] games history
