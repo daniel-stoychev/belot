@@ -45,6 +45,11 @@ export default function ScoreBoard() {
     console.log("close");
   };
 
+  // Names update
+  console.log(localStorage.getItem("test"));
+  const newNameTeamA = localStorage.getItem("newTeamA");
+  const newNameTeamB = localStorage.getItem("newTeamB");
+
   return (
     <div className={styles.main}>
       <section className={styles.container}>
@@ -54,7 +59,9 @@ export default function ScoreBoard() {
           <form onSubmit={teamScores}>
             <div className={styles.column}>
               {/* Team A */}
-              <h2 className={styles.teamTitle}>Team A</h2>
+              <h2 className={styles.teamTitle}>
+                {newNameTeamA === null ? "Team A" : newNameTeamA}
+              </h2>
 
               <input
                 type="number"
@@ -64,7 +71,9 @@ export default function ScoreBoard() {
               />
 
               {/* Team B */}
-              <h2 className={styles.teamTitle}>Team B</h2>
+              <h2 className={styles.teamTitle}>
+                {newNameTeamB === null ? "Team B" : newNameTeamB}
+              </h2>
 
               <input
                 type="number"
