@@ -178,5 +178,11 @@ MIT
 - [x] Build & Host
 - [] Move logic to gameLogic.js
 - [] Allow team names update
+  - [x] Create Tram names Button component
+  - [x] Add button ("Update team names?") to Home
+  - [] Create separate compionent for Modal
+  - [] Show Modal window on Butotn click
+  - [] Implement logic
+
 - [] functionality for team names update
 - [] games history

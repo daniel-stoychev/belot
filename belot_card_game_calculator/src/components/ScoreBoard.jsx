@@ -28,6 +28,10 @@ export default function ScoreBoard() {
     setHistory([]);
   };
 
+  const updateNames = () => {
+    console.log("Names");
+  };
+
   // derived totals (no extra state!)
   const totalA = history.reduce((sum, round) => sum + round.teamA, 0);
   const totalB = history.reduce((sum, round) => sum + round.teamB, 0);
@@ -101,7 +105,7 @@ export default function ScoreBoard() {
           <p className={styles.teamTitle}>No results yet.</p>
         )}
       </section>
-      <ButtonTeams>Update team names?</ButtonTeams>
+      <ButtonTeams onClick={updateNames}>Update team names?</ButtonTeams>
     </div>
   );
 }
