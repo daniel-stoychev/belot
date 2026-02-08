@@ -2,6 +2,8 @@ import Button from "./ButtonCalc.jsx";
 import styles from "./ScoreBoard.module.css";
 import useLocalStorage from "../hooks/useLocalStorage.js";
 import ButtonTeams from "./ButtonTeams.jsx";
+import { use, useState } from "react";
+import Modal from "./Modal.jsx";
 
 export default function ScoreBoard() {
   // const [history, setHistory] = useState([]);
@@ -28,13 +30,20 @@ export default function ScoreBoard() {
     setHistory([]);
   };
 
-  const updateNames = () => {
-    console.log("Names");
-  };
-
   // derived totals (no extra state!)
   const totalA = history.reduce((sum, round) => sum + round.teamA, 0);
   const totalB = history.reduce((sum, round) => sum + round.teamB, 0);
+
+  // == MODAL ==
+  const [openModal, setOpenModal] = useState(false);
+  const handleModalOpen = () => {
+    setOpenModal(true);
+    console.log("Open");
+  };
+  const handleModalClose = () => {
+    setOpenModal(false);
+    console.log("close");
+  };
 
   return (
     <div className={styles.main}>
@@ -105,7 +114,14 @@ export default function ScoreBoard() {
           <p className={styles.teamTitle}>No results yet.</p>
         )}
       </section>
-      <ButtonTeams onClick={updateNames}>Update team names?</ButtonTeams>
+      <ButtonTeams onClick={handleModalOpen}>Update team names?</ButtonTeams>
+      <Modal isOpen={openModal} onClose={handleModalClose}>
+        <h1>This is Modal Window!</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. In,
+          necessitatibus.
+        </p>
+      </Modal>
     </div>
   );
 }
