@@ -115,13 +115,7 @@ export default function ScoreBoard() {
         )}
       </section>
       <ButtonTeams onClick={handleModalOpen}>Update team names?</ButtonTeams>
-      <Modal isOpen={openModal} onClose={handleModalClose}>
-        <h1>This is Modal Window!</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. In,
-          necessitatibus.
-        </p>
-      </Modal>
+      <Modal isOpen={openModal} onClose={handleModalClose}></Modal>
     </div>
   );
 }

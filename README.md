@@ -184,6 +184,8 @@ MIT
   - [x] Show Modal window on Butotn click
   - [x] Fix Modal CSS
   - [] Implement logic for names update
+  - [] Hide button when names are updated
+  - [] Make it work with one Button component
 
 - [] functionality for team names update
 - [] games history
