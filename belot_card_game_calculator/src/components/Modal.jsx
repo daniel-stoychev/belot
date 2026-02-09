@@ -1,4 +1,3 @@
-import Button from "./ButtonCalc.jsx";
 import ButtonTeams from "./ButtonTeams.jsx";
 import styles from "./Modal.module.css";
 

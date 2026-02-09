@@ -21,7 +21,9 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 - Manual input of points per round
 - Automatic score calculation
 - Display current total score
-- Reset game functionality
+- Reset game functionality upon team score reaching 151
+- Keep scores array in LocalStorage
+- Modal functionality for team names update
 - Simple and clean mobile UI
 
 ---
@@ -40,12 +42,11 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 
 - Mobile‑first layout
 - Touch‑friendly buttons
-- Clear typography
 - Minimal UI (no animations required)
 
 ---
 
-## 📂 Suggested Project Structure
+## 📂 Project Structure
 
 ```
 /src
@@ -55,8 +56,10 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
  │   └── Button.jsx
  ├── logic
  │   └── gameLogic.js
- ├── pages
- │   └── Game.jsx
+ ├── hooks
+ │   └── useLocalStorage.js
+ ├── styles
+ │   └── style.css
  ├── App.jsx
  └── main.jsx
 ```
@@ -68,7 +71,8 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 - Each team has a total score
 - User inputs points for a round
 - Points are added to the selected team
-- No advanced rules (calling, bonuses, etc.)
+- Reset game button appear upon either team reaches 151
+- Option for Team names update through Modal button
 
 ---
 
@@ -84,6 +88,8 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 - Create main game screen
 - Display two teams side by side
 - Add placeholders for scores
+- Add Reset game button
+- Add update team names button
 
 ### 3️⃣ State Management
 
@@ -116,6 +122,7 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 - [x] App works on mobile browsers
 - [x] Score updates correctly
 - [x] Reset works
+- [x] Update team names works
 - [x] No console errors
 - [x] UI does not overflow screen
 
@@ -124,9 +131,7 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 ## 📈 Possible Future Improvements
 
 - Game history
-- Configurable target score (501 / 1001)
 - Dark mode
-- Team names
 - React Native version
 
 ---
@@ -156,7 +161,7 @@ MIT
 ### Base Layout & Score Input
 
 - [x] Update Header
-- [] Create main game screen
+- [x] Create main game screen
   - [x] Add Header.module.css
   - [x] Add global CSS
   - [x] Display two teams and input fields
@@ -177,7 +182,7 @@ MIT
 
 - [x] Build & Host
 - [] Move logic to gameLogic.js
-- [] Allow team names update
+- [x] Allow team names update
   - [x] Create Tram names Button component
   - [x] Add button ("Update team names?") to Home
   - [x] Create separate compionent for Modal
@@ -186,7 +191,5 @@ MIT
   - [x] Implement logic for names update
   - [x] Hide button when names are updated
   - [x] Solve CSS for inpurt in Modal
-  - [] Make it work with one Button component
 
 - [x] functionality for team names update
-- [] games history
