@@ -54,8 +54,6 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
  │   ├── Header.jsx
  │   ├── ScoreBoard.jsx
  │   └── Button.jsx
- ├── logic
- │   └── gameLogic.js
  ├── hooks
  │   └── useLocalStorage.js
  ├── styles
@@ -130,6 +128,7 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 
 ## 📈 Possible Future Improvements
 
+- Revert last round functionality
 - Game history
 - Dark mode
 - React Native version
@@ -138,7 +137,7 @@ This project is built as a **junior‑friendly portfolio project**, focusing on 
 
 ## 👨‍💻 Author
 
-Built as a learning & portfolio project by a junior React developer.
+Built as a learning & portfolio project by Daniel Stoychev - a junior React developer.
 
 ---
 
@@ -181,7 +180,6 @@ MIT
 ### Bonus
 
 - [x] Build & Host
-- [] Move logic to gameLogic.js
 - [x] Allow team names update
   - [x] Create Tram names Button component
   - [x] Add button ("Update team names?") to Home

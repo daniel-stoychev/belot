@@ -2,11 +2,10 @@ import Button from "./ButtonCalc.jsx";
 import styles from "./ScoreBoard.module.css";
 import useLocalStorage from "../hooks/useLocalStorage.js";
 import ButtonTeams from "./ButtonTeams.jsx";
-import { use, useState } from "react";
+import { useState } from "react";
 import Modal from "./Modal.jsx";
 
 export default function ScoreBoard() {
-  // const [history, setHistory] = useState([]);
   const [history, setHistory] = useLocalStorage("rounds", []);
 
   const teamScores = (e) => {
@@ -38,15 +37,12 @@ export default function ScoreBoard() {
   const [openModal, setOpenModal] = useState(false);
   const handleModalOpen = () => {
     setOpenModal(true);
-    console.log("Open");
   };
   const handleModalClose = () => {
     setOpenModal(false);
-    console.log("close");
   };
 
   // Names update
-  console.log(localStorage.getItem("test"));
   const newNameTeamA = localStorage.getItem("newTeamA");
   const newNameTeamB = localStorage.getItem("newTeamB");
 

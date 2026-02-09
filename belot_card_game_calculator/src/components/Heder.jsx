@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 import logoImage from "../assets/belot.png";
 import styles from "./Header.module.css";
 import "../styles/style.css";
