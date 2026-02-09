@@ -185,6 +185,7 @@ MIT
   - [x] Fix Modal CSS
   - [x] Implement logic for names update
   - [x] Hide button when names are updated
+  - [x] Solve CSS for inpurt in Modal
   - [] Make it work with one Button component
 
 - [x] functionality for team names update
